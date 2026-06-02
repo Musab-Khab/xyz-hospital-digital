@@ -17,7 +17,7 @@ import { toast } from "sonner";
 import { todaysAppointments, patientList } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/doctor")({
-  head: () => ({ meta: [{ title: "Doctor Portal — XYZ Hospital" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "Doctor Portal — Pakistan Hospital" }, { name: "robots", content: "noindex" }] }),
   component: DoctorPortal,
 });
 

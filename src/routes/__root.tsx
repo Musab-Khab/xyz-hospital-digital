@@ -12,6 +12,9 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
+import { SplashScreen } from "@/components/SplashScreen";
+import { Chatbot } from "@/components/Chatbot";
+import { I18nProvider } from "@/lib/i18n";
 
 function NotFoundComponent() {
   return (
@@ -78,9 +81,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "XYZ Hospital — Care, redefined" },
-      { name: "description", content: "XYZ Hospital is a 850-bed multi-specialty hospital with 320+ board-certified specialists across cardiology, oncology, neurology and more." },
-      { property: "og:title", content: "XYZ Hospital" },
+      { title: "Pakistan Hospital — Care with compassion" },
+      { name: "description", content: "Pakistan Hospital is a multi-specialty hospital with 320+ board-certified specialists across cardiology, oncology, neurology, gynecology and more." },
+      { property: "og:title", content: "Pakistan Hospital" },
       { property: "og:description", content: "Book appointments, find doctors, and access your medical records." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -117,9 +120,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
-      <Toaster richColors position="top-right" />
+      <I18nProvider>
+        <SplashScreen />
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+        <Chatbot />
+        <Toaster richColors position="top-right" />
+      </I18nProvider>
     </QueryClientProvider>
   );
 }

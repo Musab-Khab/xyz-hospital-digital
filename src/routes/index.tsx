@@ -16,9 +16,9 @@ const iconMap = { HeartPulse, Bone, Brain, Baby, Microscope, Ambulance, Stethosc
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "XYZ Hospital — Care, redefined" },
-      { name: "description", content: "Book appointments with 320+ specialists, access your records, and explore world-class care at XYZ Hospital." },
-      { property: "og:title", content: "XYZ Hospital — Care, redefined" },
+      { title: "Pakistan Hospital — Care with compassion" },
+      { name: "description", content: "Book appointments with 320+ specialists, access your records, and explore world-class care at Pakistan Hospital." },
+      { property: "og:title", content: "Pakistan Hospital — Care with compassion" },
       { property: "og:description", content: "Book appointments, find doctors, and access your medical records." },
     ],
   }),
@@ -33,7 +33,7 @@ function HomePage() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-2 text-sm md:px-6">
           <p className="flex items-center gap-2 font-medium"><Ambulance className="h-4 w-4" /> 24/7 Emergency & Level 1 Trauma Center</p>
           <a href="tel:911" className="inline-flex items-center gap-2 rounded-md bg-background/15 px-3 py-1 font-semibold hover:bg-background/25">
-            <Phone className="h-3.5 w-3.5" /> Call 911-XYZ now
+            <Phone className="h-3.5 w-3.5" /> Call 1122 now
           </a>
         </div>
       </div>

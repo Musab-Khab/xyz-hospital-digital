@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  LayoutDashboard, CalendarDays, History, FileText, Pill, FlaskConical, Receipt,
-  CalendarPlus, Download, Video, ArrowRight,
+  LayoutDashboard, CalendarDays, FileText, Pill, FlaskConical, Receipt,
+  CalendarPlus, Download, Video, ArrowRight, UserPlus, BookOpen,
 } from "lucide-react";
 import { PortalLayout, type NavItem } from "@/components/portal/PortalLayout";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,30 +14,60 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   upcomingAppointments, appointmentHistory, prescriptions, labReports, billing,
 } from "@/lib/mock-data";
+import ayat1 from "@/assets/ayat-health-1.jpg";
+import ayat2 from "@/assets/ayat-health-2.jpg";
 
 export const Route = createFileRoute("/patient")({
-  head: () => ({ meta: [{ title: "Patient Portal — XYZ Hospital" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "Patient Portal — Pakistan Hospital" }, { name: "robots", content: "noindex" }] }),
   component: PatientPortal,
 });
 
 const nav: NavItem[] = [
   { to: "/patient", label: "Dashboard", icon: <LayoutDashboard className="h-4 w-4" /> },
+  { to: "/add-patient", label: "Add Patient", icon: <UserPlus className="h-4 w-4" /> },
   { to: "/patient", label: "Appointments", icon: <CalendarDays className="h-4 w-4" /> },
+  { to: "/laboratory", label: "Laboratory", icon: <FlaskConical className="h-4 w-4" /> },
   { to: "/patient", label: "Records", icon: <FileText className="h-4 w-4" /> },
   { to: "/patient", label: "Prescriptions", icon: <Pill className="h-4 w-4" /> },
-  { to: "/patient", label: "Lab reports", icon: <FlaskConical className="h-4 w-4" /> },
   { to: "/patient", label: "Billing", icon: <Receipt className="h-4 w-4" /> },
 ];
 
 function PatientPortal() {
   return (
     <PortalLayout
-      title="Welcome back, Sarah"
+      title="Welcome back, Sarah / السلام علیکم"
       role="Patient"
       user={{ name: "Sarah Williams", initials: "SW", sub: "MRN 00482910" }}
       nav={nav}
     >
       <div className="grid gap-6">
+        {/* Islamic Ayat — Health & Healing */}
+        <Card className="overflow-hidden border-border bg-gradient-to-br from-emerald-50 via-card to-amber-50 dark:from-emerald-950/40 dark:via-card dark:to-amber-950/30">
+          <CardContent className="p-0">
+            <div className="flex items-center gap-2 border-b border-border bg-background/60 px-5 py-3">
+              <BookOpen className="h-4 w-4 text-primary" />
+              <h2 className="font-display text-sm font-semibold tracking-wide uppercase">Words of Healing · شفاء کے الفاظ</h2>
+            </div>
+            <div className="grid gap-4 p-5 md:grid-cols-2">
+              <figure className="overflow-hidden rounded-xl border border-border bg-card">
+                <img src={ayat1} alt="Quranic verse on healing - Surah Ash-Shu'ara 26:80" loading="lazy" width={1024} height={1024} className="h-56 w-full object-cover" />
+                <figcaption className="p-4">
+                  <p className="font-display text-base font-semibold">"And when I am ill, it is He who cures me."</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Surah Ash-Shu'ara (26:80) · "اور جب میں بیمار ہوتا ہوں تو وہی مجھے شفا دیتا ہے"</p>
+                </figcaption>
+              </figure>
+              <figure className="overflow-hidden rounded-xl border border-border bg-card">
+                <img src={ayat2} alt="Quranic verse on healing - Surah Al-Isra 17:82" loading="lazy" width={1024} height={1024} className="h-56 w-full object-cover" />
+                <figcaption className="p-4">
+                  <p className="font-display text-base font-semibold">"And We send down of the Qur'an that which is healing and mercy for the believers."</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Surah Al-Isra (17:82) · "اور ہم قرآن میں سے وہ نازل کرتے ہیں جو شفا ہے"</p>
+                </figcaption>
+              </figure>
+            </div>
+          </CardContent>
+        </Card>
+
+
         {/* KPIs */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Kpi label="Upcoming visits" value="3" hint="Next: Jun 8" />

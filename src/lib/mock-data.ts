@@ -53,7 +53,7 @@ export const testimonials = [
 ];
 
 export const news = [
-  { title: "XYZ Hospital opens new 60-bed cardiac wing", date: "May 28, 2026", tag: "Announcement", excerpt: "State-of-the-art hybrid OR and ICU beds expand our capacity for complex cardiac care." },
+  { title: "Pakistan Hospital opens new 60-bed cardiac wing", date: "May 28, 2026", tag: "Announcement", excerpt: "State-of-the-art hybrid OR and ICU beds expand our capacity for complex cardiac care." },
   { title: "Free community screening for diabetes & hypertension", date: "May 14, 2026", tag: "Community", excerpt: "Walk-in screenings every Saturday in June at the main lobby and three satellite clinics." },
   { title: "Dr. Aisha Rahman recognized in national Top 50 Cardiologists", date: "April 30, 2026", tag: "Awards", excerpt: "A career milestone built on 6,000+ life-saving interventional procedures." },
 ];

@@ -11,8 +11,8 @@ const iconMap = { HeartPulse, Bone, Brain, Baby, Microscope, Ambulance, Stethosc
 export const Route = createFileRoute("/departments")({
   head: () => ({
     meta: [
-      { title: "Departments — XYZ Hospital" },
-      { name: "description", content: "Explore 28 specialties at XYZ Hospital, from cardiology and oncology to pediatrics and emergency medicine." },
+      { title: "Departments — Pakistan Hospital" },
+      { name: "description", content: "Explore 28 specialties at Pakistan Hospital, from cardiology and oncology to pediatrics and emergency medicine." },
     ],
   }),
   component: DepartmentsPage,
@@ -24,7 +24,7 @@ function DepartmentsPage() {
       <section className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-20">
           <Badge variant="secondary" className="border border-border bg-background">Specialties</Badge>
-          <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-5xl">Departments at XYZ Hospital</h1>
+          <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-5xl">Departments at Pakistan Hospital</h1>
           <p className="mt-4 max-w-2xl text-muted-foreground md:text-lg">Multidisciplinary teams collaborating across 28 specialties to deliver coordinated care under one roof.</p>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { type ReactNode } from "react";
-import { Bell, Search, Stethoscope, LogOut } from "lucide-react";
+import { Bell, Search, HeartPulse, LogOut } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -25,9 +25,9 @@ export function PortalLayout({
     <div className="flex min-h-dvh bg-secondary/30">
       <aside className="hidden lg:flex w-64 shrink-0 flex-col border-r border-sidebar-border bg-sidebar text-sidebar-foreground">
         <Link to="/" className="flex items-center gap-2 border-b border-sidebar-border px-5 py-4">
-          <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground"><Stethoscope className="h-5 w-5" /></div>
+          <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground"><HeartPulse className="h-5 w-5" /></div>
           <div className="leading-tight">
-            <div className="font-display text-base font-bold">XYZ Hospital</div>
+            <div className="font-display text-base font-bold">Pakistan Hospital</div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{role} portal</div>
           </div>
         </Link>

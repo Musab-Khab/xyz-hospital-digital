@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About XYZ Hospital" },
+      { title: "About Pakistan Hospital" },
       { name: "description", content: "42 years of compassionate care. Meet our leadership, mission, facilities and accreditations." },
     ],
   }),
@@ -39,7 +39,7 @@ export function AboutPage() {
           <Badge variant="secondary" className="border border-border bg-background">About us</Badge>
           <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-5xl">A hospital where medicine meets humanity.</h1>
           <p className="mt-5 max-w-3xl text-muted-foreground md:text-lg">
-            Founded in 1984 as a 60-bed community hospital, XYZ Hospital is today an 850-bed quaternary care destination serving
+            Founded in 1984 as a 60-bed community hospital, Pakistan Hospital is today an 850-bed quaternary care destination serving
             over 1.2 million patients each year across 28 specialties.
           </p>
         </div>
