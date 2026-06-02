@@ -16,9 +16,9 @@ const iconMap = { HeartPulse, Bone, Brain, Baby, Microscope, Ambulance, Stethosc
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "XYZ Hospital — Care, redefined" },
-      { name: "description", content: "Book appointments with 320+ specialists, access your records, and explore world-class care at XYZ Hospital." },
-      { property: "og:title", content: "XYZ Hospital — Care, redefined" },
+      { title: "Pakistan Hospital — Care with compassion" },
+      { name: "description", content: "Book appointments with 320+ specialists, access your records, and explore world-class care at Pakistan Hospital." },
+      { property: "og:title", content: "Pakistan Hospital — Care with compassion" },
       { property: "og:description", content: "Book appointments, find doctors, and access your medical records." },
     ],
   }),
