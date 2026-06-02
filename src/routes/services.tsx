@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — XYZ Hospital" },
+      { title: "Services — Pakistan Hospital" },
       { name: "description", content: "Emergency care, diagnostics, surgery, labs, pharmacy, and telemedicine — under one roof." },
     ],
   }),

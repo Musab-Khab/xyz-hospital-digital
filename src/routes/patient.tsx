@@ -18,7 +18,7 @@ import ayat1 from "@/assets/ayat-health-1.jpg";
 import ayat2 from "@/assets/ayat-health-2.jpg";
 
 export const Route = createFileRoute("/patient")({
-  head: () => ({ meta: [{ title: "Patient Portal — XYZ Hospital" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "Patient Portal — Pakistan Hospital" }, { name: "robots", content: "noindex" }] }),
   component: PatientPortal,
 });
 

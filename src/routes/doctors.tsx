@@ -13,7 +13,7 @@ import { departments, doctors } from "@/lib/mock-data";
 export const Route = createFileRoute("/doctors")({
   head: () => ({
     meta: [
-      { title: "Find a doctor — XYZ Hospital" },
+      { title: "Find a doctor — Pakistan Hospital" },
       { name: "description", content: "Search 320+ board-certified specialists by name, department, or availability." },
     ],
   }),

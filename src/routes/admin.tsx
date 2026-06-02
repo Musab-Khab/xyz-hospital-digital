@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { adminMonthly, departmentLoad, doctors, departments } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/admin")({
-  head: () => ({ meta: [{ title: "Admin Dashboard — XYZ Hospital" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "Admin Dashboard — Pakistan Hospital" }, { name: "robots", content: "noindex" }] }),
   component: AdminPortal,
 });
 
