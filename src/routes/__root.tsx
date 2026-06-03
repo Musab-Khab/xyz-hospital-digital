@@ -14,7 +14,6 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
 import { SplashScreen } from "@/components/SplashScreen";
 import { Chatbot } from "@/components/Chatbot";
-import { I18nProvider } from "@/lib/i18n";
 
 function NotFoundComponent() {
   return (
@@ -120,13 +119,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <I18nProvider>
-        <SplashScreen />
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
-        <Chatbot />
-        <Toaster richColors position="top-right" />
-      </I18nProvider>
+      <SplashScreen />
+      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <Outlet />
+      <Chatbot />
+      <Toaster richColors position="top-right" />
     </QueryClientProvider>
   );
 }
