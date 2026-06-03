@@ -35,7 +35,7 @@ const nav: NavItem[] = [
 function PatientPortal() {
   return (
     <PortalLayout
-      title="Welcome back, Sarah / السلام علیکم"
+      title="Welcome back, Sarah"
       role="Patient"
       user={{ name: "Sarah Williams", initials: "SW", sub: "MRN 00482910" }}
       nav={nav}
